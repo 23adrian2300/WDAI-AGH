@@ -1,0 +1,19 @@
+{
+    "topics":[
+        {
+            "name": "The Basics",
+            "short": "Core angular basics",
+            "long": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquet lectus ut leo malesuada luctus. Curabitur volutpat mi in dictum mollis. Aenean vitae est et velit malesuada semper. Duis sollicitudin sem eget nisi elementum, sed venenatis mi cursus. Nunc ac sapien quis ex scelerisque vestibulum in id leo. Quisque imperdiet molestie sem nec pretium. Nulla semper lobortis diam, vitae placerat dui accumsan vel. Cras varius purus massa, et aliquet urna varius ut."
+        },
+        {
+            "name": "Components",
+            "short": "Components are core key to build app",
+            "long": "Morbi magna nunc, gravida consequat dui eu, rhoncus suscipit libero. Quisque vitae tempor ex. Aliquam magna ipsum, euismod vitae pretium sit amet, pharetra eleifend metus. Donec luctus nisi lorem, sed ornare justo dictum ut. Phasellus at tortor orci. Sed quis scelerisque nibh. Sed placerat tortor ut odio euismod aliquam. Maecenas imperdiet nec erat a accumsan. Phasellus consectetur rhoncus urna. Nunc eget malesuada sem, euismod rhoncus eros. Nulla facilisi. Sed tincidunt tristique elementum."
+        },
+        {
+            "name": "Events",
+            "short": "Events are important thing in angular",
+            "long": "Maecenas tortor erat, semper quis pharetra vitae, porttitor eu metus. Cras malesuada turpis urna, sed rhoncus neque consectetur eget. Morbi sagittis efficitur dolor nec cursus. Nullam a mollis neque, ac hendrerit nisl. Nulla eu nisl quis mauris pellentesque rhoncus non et ipsum. Nunc vel nisi faucibus, sollicitudin est mollis, lobortis nisl. Proin quis nunc vitae urna congue sagittis in sit amet enim. Vestibulum nisl urna, consectetur ut nulla a, gravida cursus tortor. Duis rhoncus maximus mattis."
+        }
+    ]
+}

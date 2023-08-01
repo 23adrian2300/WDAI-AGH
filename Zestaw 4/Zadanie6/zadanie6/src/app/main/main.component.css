@@ -1,0 +1,12 @@
+#topic{
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    background-color: beige;
+}
+h3{
+    text-align: center;
+}
+p{
+    margin-left: 15px;
+}

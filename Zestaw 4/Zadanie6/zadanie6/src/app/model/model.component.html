@@ -1,0 +1,12 @@
+<main>
+    <h1>Wybiez temat: </h1>
+
+    <section>
+        <div *ngFor="let topic of topics; index as i" class="topics">
+            <h3>{{topic.name}}</h3>
+            <p>{{topic.short}}</p>
+            <button (click)="readMore(i)">Read more</button>
+        </div>
+    </section>
+    
+</main>
