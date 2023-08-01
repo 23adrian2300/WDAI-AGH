@@ -1,0 +1,11 @@
+<p>Dodaj swoją reakcję:</p>
+
+<section class="likes">
+    <p>Lubię: {{Likes}}</p>
+    <span (click)="AddOpinion(1)" [ngStyle]="{'color': likeStatus== 1 ? 'red' : 'black'}" class="new">❤</span>
+</section>
+
+<section class="dislikes">
+    <p>Nie lubię: {{Dislikes}}</p>
+    <span (click)="AddOpinion(2)" [ngStyle]="{'color': likeStatus == 2 ? 'blue' : 'black'}" class="new">✖</span>
+</section>

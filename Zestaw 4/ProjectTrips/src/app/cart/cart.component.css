@@ -1,0 +1,39 @@
+main{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(126, 224, 170);
+    width: 450px;
+    padding: 10px;
+    font-family: "Times New Roman", Times, serif;
+    border-radius: 20px;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 1025px;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-right: 100%;
+  }
+}
+
+.cartitem{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+
+@media only screen and (max-width: 750px){
+    main{
+        width: 90%;
+        margin-top: 30px;
+    }
+}

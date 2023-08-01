@@ -1,0 +1,18 @@
+p{
+    background-color: antiquewhite;
+    font-weight: 600;
+}
+.likes, .dislikes{
+    display: flex;
+    margin-top: -25px;
+    align-items:baseline;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    font-weight: 600;
+}
+
+.new{
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+}

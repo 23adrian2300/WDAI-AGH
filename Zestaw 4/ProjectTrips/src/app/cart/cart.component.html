@@ -1,0 +1,12 @@
+<main>
+    <div *ngFor="let trip of trips">
+        <div *ngIf="trip.Reserved > 0" class="cartitem">
+            
+            <p>{{trip.Name | titlecase}}:</p>
+            <p>x{{trip.Reserved}}</p>
+
+        </div>
+    </div>
+    
+    <h1 >Suma: {{getSum() | currency:'PLN':'symbol-narrow'}}</h1>
+</main>

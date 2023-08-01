@@ -1,0 +1,7 @@
+<div class="stars">
+    <span [ngClass]="{'golden': i <= elementStars && isRated==false,
+    'rated': i <= ratedStars}" class="star" *ngFor="let item of [0,1,2,3,4];
+    index as i" (mouseenter)="rateObject(i)" (mouseleave)="disrateObject()" (click)="ratedObject(i)">
+    ★
+</span>
+</div>

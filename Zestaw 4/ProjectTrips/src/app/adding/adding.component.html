@@ -1,0 +1,49 @@
+<main id="form">
+
+    <form #tripForm="ngForm" (ngSubmit)="addTrip()" >
+
+        <div>
+            <label for="name">Nazwa wycieczki: </label><br>
+            <input type="text" id="name" name="Name" [(ngModel)]="trip.Name" required maxlength="100">
+        </div>
+
+        <div>
+            <label for="destination">Kraj: </label><br>
+            <input type="text" id="destination" name="Destination" [(ngModel)]="trip.Destination" required maxlength="100">
+        </div>
+
+        <div>
+            <label for="start-date">Data początku: </label><br>
+            <input type="date" id="start-date" name="StartDate" [(ngModel)]="trip.StartDate" required>
+        </div>
+
+        <div>
+            <label for="end-date">Koniec wycieczki: </label><br>
+            <input type="date" id="end-date" name="EndDate" [(ngModel)]="trip.EndDate" required>
+        </div>
+
+        <div>
+            <label for="price">Cena: </label><br>
+            <input type="text" id="price" name="Price" [(ngModel)]="trip.Price" required pattern="([1-9][0-9]{2,4})">
+        </div>
+
+        <div>
+            <label for="max-people">Maksymalna liczba osób: </label><br>
+            <input type="text" id="max-people" name="MaxPeople" [(ngModel)]="trip.MaxPeople" required pattern="([1-9][0-9]{1,2})">
+        </div>
+
+        <div>
+            <label for="description">Opis: </label><br>
+            <input type="text" id="description" name="Description" [(ngModel)]="trip.Description" required maxlength="150">
+        </div>
+
+        <div>
+            <label for="photo">Link do zdjęcia: </label><br>
+            <input type="text" id="photo" name="Photo" [(ngModel)]="trip.Photo" required maxlength="100">
+        </div>
+        <br>
+
+        <button type="submit" [disabled]="!tripForm.valid" (click)="resetTrip()">Dodaj wycieczkę</button>
+        
+    </form>
+</main>

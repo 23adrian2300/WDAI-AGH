@@ -1,0 +1,38 @@
+main{
+    margin: 0 auto;
+    width: 70%;
+}
+input{
+    width: 50%;
+    margin-bottom: 10px;
+}
+label{
+    font-weight: 900;
+}
+#form{
+    background-color: rgb(198, 120, 221);
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px 8px rgb(7, 11, 55);
+    margin-bottom: 30px;
+    margin-top: 10px;
+    animation: slide;
+    animation-duration: 2s;
+    
+}
+
+@keyframes slide{
+    from{margin-top: 100%;}
+    to {
+        margin-top: 0%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #form{
+        width: 90%;
+        overflow: hidden;
+    }
+}

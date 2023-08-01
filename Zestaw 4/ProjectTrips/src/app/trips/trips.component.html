@@ -1,0 +1,100 @@
+<div id="cart" [ngStyle]="{
+    'background-color': allTripsInCart >= 10 ? 'green' : 'red'}">
+    Obecnie zarezerwowano: {{allTripsInCart}}
+</div>
+
+<div id="showcart" (click)="showCart()">
+    <span class="material">
+        Koszyk🛒
+    </span>
+</div>
+
+
+<section id="incart" *ngIf="cartVisibility">
+    <app-cart [trips]="trips"></app-cart>
+</section>
+
+
+
+<div id="filtervis" (click)="addVisFilter()">Filtruj</div>
+<section id="filter" *ngIf="filterVis">
+    <h2>Filtrowanie po wybranych parametrach</h2>
+    <div class="filtervalue" id="country">
+        <h4>Kraj: </h4>
+        <input type="text" [(ngModel)]="dest">
+    </div>
+    <div class="filtervalue" id="date">
+        <h4>Data: </h4>
+        <p>Od: </p>
+        <input type="date" [(ngModel)]="startDate">
+        <p>Do: </p>
+        <input type="date" [(ngModel)]="endDate">
+    </div>
+    <div class="filtervalue" id="price">
+        <h4>Cena: </h4>
+        <p>Od: </p>
+        <input type="number" [(ngModel)]="minPrice" [min]="getMinPrice()" [max]="getMaxPrice()">
+        <p>Do: </p>
+        <input type="number" [(ngModel)]="maxPrice" [min]="getMinPrice()" [max]="getMaxPrice()">
+    </div>
+    <div class="filtervalue" id="likes">
+        <h4>Ocena: </h4>
+        <p>Minimalna ilość like'ów: </p>
+        <input type="text" [(ngModel)]="likes">
+        <p>Max ilość dislike'ów: </p>
+        <input type="text" [(ngModel)]="dislikes">
+    </div>
+    <div>
+        <button class="btn" id="resetbtn" (click)="removeFilters()"><span>Wyczyść filtry🧹</span></button>
+    </div>
+
+</section>
+
+<main>
+    <div *ngFor="let trip of trips | filterbyname : dest | fliterbyprice : minPrice : maxPrice | filterbyopinion : likes : dislikes | filterByDate : startDate : endDate" class="tripslist" 
+    [ngClass] = "{
+        'low': trip.MaxPeople - trip.Reserved <= 5 && trip.MaxPeople - trip.Reserved > 0,
+        'outofstock': trip.MaxPeople - trip.Reserved == 0,
+        'leastexpensive': trip.Price == getMinPrice(),
+        'mostexpensive': trip.Price == getMaxPrice()}">
+
+        <img src="{{trip.Photo}}">
+
+        <h1>{{trip.Name | uppercase}}</h1>
+
+        <p>Cel podróży: {{trip.Destination | uppercase}}</p>
+
+        <p>Data wyjazdu: {{trip.StartDate | date:'d MMMM y'}}</p>
+
+        <p>Data powrotu: {{trip.EndDate | date:'d MMMM y'}}</p>
+
+        <p>Cena: {{trip.Price | currency:'PLN':'symbol-narrow'}}</p>
+
+        <p>Ilość dostępnych miejsc: {{trip.MaxPeople - trip.Reserved}}</p>
+
+        <div class="reservations">
+
+            <p>Zarezerwowano:</p>
+
+            <div class="maxpeople">
+                <span  *ngIf="trip.Reserved > 0" class="minus" (click)="removeClick(trip)">➖</span>
+                {{trip.Reserved}}
+                <span *ngIf="trip.Reserved < trip.MaxPeople" class="plus" (click)="addClick(trip)">➕</span>
+            </div>
+        </div>
+        
+        <p>Opis: {{trip.Description}}</p>
+        <div class="removetrip" (click)="reset(trip)" (click)="removeTrip(trip)">🗑️</div>
+        
+        <app-rating (ratingChanged)="ratingEventHandler(trip, $event)" [Likes]="trip.Likes" [Dislikes]="trip.Dislikes"></app-rating>
+        <p>Dodaj ocenę:<app-stars></app-stars></p>
+    </div>
+
+</main>
+<div id="addTrip" (click)="visibilityAddForm()">
+    Dodaj swoją wycieczkę
+</div>
+<app-adding *ngIf="formVisibility" (reset)="formResetEvent($event)" (formSubmitEvent)="formSubmitEventHandler($event)" class="forms"></app-adding>
+
+
+
