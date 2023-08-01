@@ -1,0 +1,324 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: grid;
+    gap: 1em;
+    background-color: black;
+    grid-template-columns: minmax(14em, max-content) auto max-content;
+    grid-template-rows: max-content max-content auto max-content;
+    grid-template-areas:
+        "header header header"
+        "sidebar navigation ads"
+        "sidebar main ads"
+        "sidebar main ads"
+        "footer footer footer";
+}
+
+body>* {
+    border: 2px solid rgb(0, 55, 255);
+    border-radius: 1%;
+    border-style: double;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 0.5em;
+    background-image: linear-gradient(to bottom left, blue, magenta);
+}
+
+.navi {
+    font-style: oblique 40deg;
+    font-size: larger;
+    font-weight: 900
+}
+
+nav {
+    grid-area: navigation;
+    padding: 0.5em;
+    background-image: repeating-linear-gradient(rgb(246, 170, 170), rgb(255, 255, 177) 10%, rgb(178, 252, 178) 20%)
+}
+
+.head {
+    grid-area: navigation;
+    word-wrap: break-word;
+    background-color: greenyellow;
+    min-height: 100px;
+    display: inline;
+}
+
+.head>ul>li {
+    display: inline;
+    transform: translate(-50%, -50%);
+}
+
+main {
+    background-image: linear-gradient(to bottom right, darkmagenta, white);
+    color: black;
+    grid-area: main;
+    padding: 0.5em;
+    min-height: 200vh;
+}
+
+.main-content {
+    padding: 2em;
+    margin: 2em;
+    background-color: rgb(191, 222, 217);
+    transform: skewX(-15deg);
+}
+
+.main-content>* {
+    transform: skewX(15deg);
+}
+
+.main-content>img {
+    float: left;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    margin-right: 3em;
+}
+
+.main-content>h1 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.main-content>p {
+    word-wrap: break-word;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    aspect-ratio: 2/1;
+    margin-top: 30px;
+    background-image: url(img/abudhabi.jpg);
+    min-height: 380px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    overflow: hidden;
+    margin: 1em;
+
+}
+
+.skew {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 0 -7em;
+    transform: skewX(-15deg);
+
+}
+
+.content {
+    height: 10%;
+    transform: skewX(15deg);
+    color: rgb(255, 0, 106);
+    padding-left: max(6.5em, 25%);
+    ;
+    padding-top: 5%;
+}
+
+.content>h1 {
+    margin: 3%;
+    padding: 0;
+    font-size: 2vw;
+}
+
+.stdin {
+    font-size: 1vw;
+    width: 60%;
+    border: 0;
+    margin: 3% 0;
+    padding: 3%;
+}
+
+.checkdiv {
+    margin: 5% 0;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    margin: 3%;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 20%;
+    left: -2em;
+    height: 2em;
+    width: 2em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.checkbox:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked~.checkmark {
+    background-color: rgb(255, 0, 0);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox .checkmark:after {
+    top: 0.25em;
+    left: 0.25em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: white;
+}
+
+label {
+    font-size: 1vw;
+    padding: 1em;
+    color: rgb(88, 88, 88);
+    cursor: pointer;
+}
+
+.content>button {
+    color: white;
+    margin: 3% 0;
+    padding: 2% 4%;
+    border-radius: 2em;
+    border: 1px solid rgb(255, 0, 111);
+    background-color: rgb(255, 0, 111);
+    cursor: pointer;
+}
+
+.content>button:active {
+    color: rgb(255, 0, 111);
+    background-color: white;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 0.5em;
+}
+
+.info {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    opacity: 0.8;
+}
+
+.info>p {
+    color: aliceblue;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.info>img {
+    display: block;
+    border-radius: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.links {
+    display: flex;
+    margin-right: 10px;
+}
+
+.links>a {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ads {
+    grid-area: ads;
+    padding: 0.5em;
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+footer {
+    grid-area: footer;
+    padding: 0.5em;
+    background-color: hotpink;
+}
+
+
+@media (max-width: 670px) {
+    body {
+        grid-template-columns: auto;
+        grid-template-rows: max-content max-content auto max-content max-content max-content;
+        grid-template-areas:
+            "header"
+            "navigation"
+            "main"
+            "sidebar"
+            "ads"
+            "footer";
+    }
+
+    .info {
+        position: static;
+    }
+
+    .links {
+        display: inline-flex;
+    }
+
+    .stdin {
+        font-size: 2vw;
+    }
+
+    label {
+        font-size: 1.5vw;
+    }
+
+    .info>img {
+        display: block;
+        border-radius: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+}
+
+@media (min-width: 670px) and (max-width: 1000px) {
+    body {
+        grid-template-columns: minmax(14em, max-content) auto;
+        grid-template-rows: max-content max-content auto max-content;
+        grid-template-areas:
+            "header header"
+            "navigation navigation"
+            "sidebar main"
+            "ads footer";
+    }
+
+    .stdin {
+        font-size: 1.5vw;
+    }
+
+    .info>img {
+        display: block;
+        border-radius: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }
+}

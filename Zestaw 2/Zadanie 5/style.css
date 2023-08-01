@@ -1,0 +1,72 @@
+#menu{
+margin-top: 1.5vh;
+height: 1.5 vh;
+transition: width 1s;
+float: left;
+width: 200px;
+}
+
+body{
+  margin:0;
+}
+
+.element{
+  height: 5vh;
+  width: 92%;
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 1.5vh;
+  display: flex;
+  color:rgb(30,129,176);
+  padding-left: 3%;
+  font-size: 0.9rem;
+  align-items: center;
+
+}
+
+.content .badge {
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: lightseagreen;
+  border:lightseagreen;
+  color: rgb(255, 255, 255);
+}
+.content{
+  color:rgb(29, 106, 206);
+    margin-left:5%;
+    transition: 1s;
+}
+
+
+.element:hover{
+  background-color: lightseagreen;
+  color:white;
+}
+
+
+#border{
+  height: 99vh;
+  border-left: 99vh;
+  border:solid lightseagreen;
+  float:left;
+}
+
+div>i{
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 600px){
+  #menu{
+    width: 10%;
+}
+.content{
+    opacity: 0;
+    position: absolute;
+    left:5%;
+}
+.element{
+    justify-content: center;
+}
+
+}

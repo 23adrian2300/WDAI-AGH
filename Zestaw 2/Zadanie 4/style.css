@@ -1,0 +1,146 @@
+main{
+    background-image:url('bg.jpg');
+    height: 90vh;
+    width: 100%;
+    margin:0;
+}
+
+#fog{
+    background-color: rgba(55, 161, 211, 0.5);
+    width: 100%;
+    height: 90vh;
+}
+
+body{
+    padding:0;
+    margin: 0;
+    background-color: #61b4e3;
+}
+
+.header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left:8%;
+    margin-right:8%;
+    align-items: center;
+}
+
+#login{
+    display:flex;
+    gap:5%;
+    align-items: center;
+    color:white;
+    width:20%;
+    height: 6vh;
+}
+
+#login a{
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+    border:1px solid white;
+    line-height: 5vh;
+    transition: 0.2s;
+}
+
+
+#logo{
+    color:white;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+#login>a:nth-child(2){
+    color:#61b4e3;
+    background-color: white;
+}
+a{
+    width: 40%;
+    text-decoration: none;
+    display: block;
+    color:white;
+}
+
+nav{
+    display: flex;
+    width: 40%;
+    align-items:stretch;
+}
+
+nav>a{
+    display: block;
+    font-size: 1.5rem;
+    width:25%;
+    color:white;
+    text-align: center;
+    height:10vh;
+    line-height: 9.5vh;
+    font-family: sans-serif;
+    transition: 0.5s;
+}
+
+.arrow::after{
+    content:'▼';
+    font-size: 1rem;
+}
+
+nav>a:hover{
+    background-color: rgb(10, 94, 150);
+    letter-spacing: 5px;
+}
+
+.list{
+    display:none;
+    width: 190%;
+    margin: 0;
+    padding: 0;
+    position:relative;
+}
+
+nav>a:nth-child(2):hover .list{
+    display:block;
+}
+
+nav>a:nth-child(3):hover .list{
+    display:block;
+}
+
+.link{
+    background-color: white;
+    color: #61b4e3;
+    border: 1px solid #61b4e3;
+    text-align: left;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing:0;
+}
+
+.link:hover::after{
+    content:'▸';
+    font-size: 2rem;
+    position:relative;
+}
+
+.list::before{
+    content:''; 
+    position: absolute; 
+    top:-9.5px;
+    left:15%;
+    width: 0;
+    height: 0;
+    border-bottom: solid 10px rgb(255, 255, 255);
+    border-left: solid 10px transparent; 
+    border-right: solid 10px transparent; 
+}
+#login>a:nth-child(1):hover{
+    border-color: #61b4e3;
+    color:#61b4e3;
+    background-color: white;
+}
+#login>a:nth-child(2):hover{
+    border-color: white;
+    color:white;
+    background-color: #61b4e3;
+}
