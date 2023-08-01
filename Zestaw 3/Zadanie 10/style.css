@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+#container {
+    height: 100vh;
+}
+
+#area {
+    border: 2px solid gray;
+    padding: 8vw 10vw;
+    margin: 0;
+    width: max-content;
+}
+
+#ball {
+    position: absolute;
+    background-color: red;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+#warning{
+    position: absolute;
+    transition: transform 0.3s;
+    color: red;
+}
+

@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form i{
+    text-align: right;
+    position: relative;
+    top: -25px;
+    width: 16px;
+    margin-left: 90%;
+    cursor: pointer;
+}
+
+label{
+    font-size: 1.2em;
+    color:black;
+    margin-bottom: 10px;
+}
+
+input{
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    min-width: 200px;
+    max-width: 250px;
+    width: 30vw;
+}
+
+
+#passwordrequirements{
+    font-size: large;
+    font-weight: 700;
+}
+
+#repuirepassword,#pass{
+    font-size: 1.2em;
+    color:black;
+}
+
+.require{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#warning{
+    color: red;
+    font-weight: 600;
+    font-size: 1.2em;
+    position:relative;
+}
+
+.require i{
+    margin-right: 5px;
+}
+
+.gg-close-o{
+    background-color: gray;
+    color: white;
+}
+
+.gg-check-o{
+    background-color:rgb(1, 175, 175);
+    color: white;
+}

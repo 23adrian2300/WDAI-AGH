@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Książka adresowa</h1>
+        <div id="book"></div>
+        <section id="addingadress">
+            <form>
+                <div class="datainput">
+                    <p>Imię nazwisko</p>
+                    <input type="text" required="true" id="name" name="name" required pattern="[\s]*\p{Lu}\p{Ll}+\s\p{Lu}\p{Ll}+(-\p{Lu}\p{Ll}+)?[\s]*">
+                </div>
+                <div class="datainput">
+                    <p>Telefon</p>
+                    <input type="text" required="true" id="phonenumber" name="phonenumber" required pattern="([\s]*[+]?[\s]*([0-9][\s]*){9}[\s]*)|[\s]*([+]?[\s]*([0-9][\s]*){12})[\s]*">
+                </div>
+                <div id="addbutton">Dodaj ➕</div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

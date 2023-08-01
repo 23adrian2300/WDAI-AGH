@@ -1,0 +1,116 @@
+body{
+    position: relative;
+    background-color: rgb(232, 194, 148);
+    
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 60px 0 60px;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.images{
+    width: 200px;
+    height: 120px;
+    border-radius: 50px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.fa-solid{
+    color: rgb(10, 36, 10);
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#slash{
+    color:rgb(187, 0, 255);
+}
+
+#name{
+    color:green;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+#position,#content{
+    color:rgb(97, 143, 148);
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.button{
+    background-color: rgb(64, 27, 65);
+    height: 40px;
+    width: 180px;
+    color: rgb(253, 253, 253);
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#quote{
+    margin-top: 0;
+    font-size: 80px;
+    color:rgb(89, 10, 208);
+}
+
+@keyframes leftIn{
+    from {
+        margin-right: 100%;
+        text-align: center;
+    }
+    to {
+        margin-left: 10%;
+        text-align: center;
+    }}
+
+@keyframes rightOut{
+    from {
+        margin-left: 10%;
+        text-align: center;
+    }
+
+    to {
+        margin-left: 100%;
+        text-align: center;
+    }
+}
+@keyframes leftOut{
+    from {
+        margin-right: 10%;
+        text-align: center;
+    }
+    to {
+        margin-left: 100%;
+        text-align: center;
+    }}
+
+@keyframes rightIn{
+    from {
+        margin-left: 100%;
+        text-align: center;
+    }
+
+    to {
+        margin-left: 10%;
+        text-align: center;
+    }
+}
